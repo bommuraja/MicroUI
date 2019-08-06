@@ -1,0 +1,57 @@
+<input type="hidden" [(ngModel)]="userAccountData.UserAccountID"/> 
+<div class="row">
+  <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+      <b><label class="control-label">RoleID </label></b>
+  </div>
+  <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+    <input [(ngModel)]="userAccountData.RoleID" placeholder="RoleID" disabled/>
+  </div>
+  <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+    <b><label class="control-label">UserAccountName </label></b>
+</div>
+<div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+  <input [(ngModel)]="userAccountData.UserAccountName" placeholder="UserAccountName" disabled/>
+</div>
+</div> 
+<div class="row">
+  <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+      <b><label class="control-label">ContactNumber </label></b>
+  </div>
+  <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+    <input [(ngModel)]="userAccountData.ContactNumber" placeholder="ContactNumber" disabled/>
+  </div>
+  <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+    <b><label class="control-label">UserName </label></b>
+</div>
+<div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+  <input [(ngModel)]="userAccountData.UserName" placeholder="UserName" disabled/>
+</div>
+</div>
+<div class="row">
+  <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+      <b><label class="control-label">Password </label></b>
+  </div>
+  <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+    <input [(ngModel)]="userAccountData.Password" placeholder="Password" disabled/>
+  </div>
+  <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+    <b><label class="control-label">EMailAddress </label></b>
+</div>
+<div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+  <input [(ngModel)]="userAccountData.EMailAddress" placeholder="EMailAddress" disabled/>
+</div>
+</div> 
+<div class="row">
+  <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+      <b><label class="control-label">ContactAddress </label></b>
+  </div>
+  <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+    <input [(ngModel)]="userAccountData.ContactAddress" placeholder="ContactAddress" disabled/>
+  </div>
+  <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+    <b><label class="control-label">Actions </label></b>
+</div>
+<div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+  <button (click)="navigateToUserAccountList(userAccountData.PageType)">{{userAccountData.NextAction}}</button>
+</div>
+</div>

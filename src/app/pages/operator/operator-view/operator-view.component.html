@@ -1,0 +1,17 @@
+<div>
+  <h2>DataEntryOperatorName</h2>
+  <div>
+    <input type="hidden" [(ngModel)]="operatorData.DataEntryOperatorID"/>       
+    <label>Operator Name:
+      <input [(ngModel)]="operatorData.DataEntryOperatorName" placeholder="Operator Name" disabled/>
+    </label><br>
+    <label>Created Date:
+      <input [(ngModel)]="operatorData.CreatedDate" placeholder="Created Date" disabled/>
+    </label><br>
+    <label>Created By:
+      <input [(ngModel)]="operatorData.CreatedBy" placeholder="Created By" disabled/>
+    </label><br>
+    
+  </div>
+  <button (click)="navigateToOperatorList()">Back</button>
+</div>

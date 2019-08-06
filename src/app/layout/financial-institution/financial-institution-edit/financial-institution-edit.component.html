@@ -1,0 +1,47 @@
+<div>
+  <h2>Edit Financial Institution</h2>
+  <div>
+    <label>FinancialInstitutionID:
+      <input [(ngModel)]="financialInstitutionData.FinancialInstitutionID" placeholder="FinancialInstitutionID"/>
+    </label><br>
+    <label>UserAccountID:
+      <input [(ngModel)]="financialInstitutionData.UserAccountID" placeholder="UserAccountID"/>
+    </label><br>
+    <label>AccountName:
+      <input [(ngModel)]="financialInstitutionData.AccountName" placeholder="AccountName"/>
+    </label><br>
+    <label>NickName:
+      <input [(ngModel)]="financialInstitutionData.NickName" placeholder="NickName"/>
+    </label><br>
+    <label>AccountNumber:
+      <input [(ngModel)]="financialInstitutionData.AccountNumber" placeholder="AccountNumber"/>
+    </label><br>
+    <label>InstitutionName:
+        <input [(ngModel)]="financialInstitutionData.InstitutionName" placeholder="InstitutionName"/>
+      </label><br>
+      <label>InstitutionIFSCCode:
+          <input [(ngModel)]="financialInstitutionData.InstitutionIFSCCode" placeholder="InstitutionIFSCCode"/>
+        </label><br>
+        <label>InstitutionLocation:
+          <input [(ngModel)]="financialInstitutionData.InstitutionLocation" placeholder="InstitutionLocation"/>
+        </label><br>
+        <label>InstitutionCity:
+          <input [(ngModel)]="financialInstitutionData.InstitutionCity" placeholder="InstitutionCity"/>
+        </label><br>
+        <label>CreatedDate:
+          <input [(ngModel)]="financialInstitutionData.CreatedDate" placeholder="CreatedDate"/>
+        </label><br>
+        <label>CreatedBy:
+          <input [(ngModel)]="financialInstitutionData.CreatedBy" placeholder="CreatedBy"/>
+        </label><br>
+        <label>LastModifiedDate:
+            <input [(ngModel)]="financialInstitutionData.LastModifiedDate" placeholder="LastModifiedDate"/>
+          </label><br>
+          <label>LastModifiedBy:
+              <input [(ngModel)]="financialInstitutionData.LastModifiedBy" placeholder="LastModifiedBy"/>
+            </label><br>
+
+  </div>
+  <button (click)="updateFinancialInstitution()">Save</button>
+</div>
+

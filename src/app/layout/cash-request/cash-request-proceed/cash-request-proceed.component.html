@@ -1,0 +1,150 @@
+<div>
+  <h2>Update Cash Request </h2>
+  <div>
+
+      <div class="row">
+          <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+              <b><label class="control-label">CashRequestID </label></b>
+          </div>
+          <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+              <input [(ngModel)]="cashRequestData.CashRequestID" placeholder="CashRequestID" disabled/>
+          </div>
+          <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+              <b><label class="control-label">UserAccountName </label></b>
+          </div>
+          <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+              <input [(ngModel)]="cashRequestData.UserAccountName" placeholder="UserAccountName" disabled/>
+          </div>
+      </div>  
+      <div class="row">
+            <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+                    <b><label class="control-label"> Old Status</label></b>
+                </div>
+                  <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+                        <input [(ngModel)]="cashRequestData.CashRequestStatusName" placeholder="CashRequestStatusName" disabled/> 
+                </div>
+
+          <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+              <b><label class="control-label"> New Status </label></b>
+          </div>
+              <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+                  <select (change)="cashRequestData.CashRequestStatusID=($event.target.value)"  [(ngModel)]="cashRequestData.CashRequestStatusID">
+                  <option value="0">--All--</option>
+                  <option *ngFor="let requestStatus of cashRequestData.CashRequestStatusList" value={{requestStatus.CashRequestStatusID}}>
+                      {{requestStatus.CashRequestStatusName}}
+                  </option>
+              </select>
+            </div>
+         
+     </div>  
+     <div class="row">
+            <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+                    <b><label class="control-label"> PaymentFromBankList</label></b>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+                        <select (change)="cashRequestData.PaymentFromBankID=($event.target.value)" [(ngModel)]="cashRequestData.PaymentFromBankID">
+                                <option value="0">--All--</option>
+                                <option *ngFor="let payFromBank of cashRequestData.PaymentFromBankList" value={{payFromBank.FinancialInstitutionID}}>
+                                    {{payFromBank.InstitutionName}}
+                                </option>
+                            </select>
+                </div>
+        <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+            <b><label class="control-label">PaymentToBanklist </label></b>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+            <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+                <select (change)="cashRequestData.PaymentToBankID=($event.target.value)"  [(ngModel)]="cashRequestData.PaymentToBankID">
+                <option value="0">--All--</option>
+                <option *ngFor="let payToBank of cashRequestData.PaymentToBankList" value={{payToBank.FinancialInstitutionID}}>
+                    {{payToBank.InstitutionName}}
+                </option>
+            </select>
+          </div>
+        </div>
+      
+    </div> 
+    <div class="row">
+            <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+                    <b><label class="control-label">RequestAmount </label></b>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+                    <input [(ngModel)]="cashRequestData.RequestAmount" placeholder="RequestAmount" disabled/>
+                </div>
+                <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+                        <b><label class="control-label">ResponseAmount </label></b>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+                        <input [(ngModel)]="cashRequestData.ResponseAmount" placeholder="ResponseAmount"/>
+                    </div>
+      
+      
+      </div> 
+      <div class="row">
+            <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+                    RequestDate
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+            <input type="date" [(ngModel)]="cashRequestData.RequestDate" placeholder="RequestDate" disabled/>
+
+                </div>
+            <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+                    <b><label class="control-label">ResponseDate </label></b>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+                    <input type="date" [(ngModel)]="cashRequestData.ResponseDate" placeholder="ResponseDate"/>
+                </div>
+         
+      </div>  
+      <div class="row">
+            <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+              <b><label class="control-label">CreatedDate </label></b>
+
+                </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+              <input type="date" [(ngModel)]="cashRequestData.CreatedDate" placeholder="CreatedDate" disabled/>
+
+                    </div>
+          <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+              <b><label class="control-label">CreatedBy </label></b>
+          </div>
+          <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+              <input [(ngModel)]="cashRequestData.CreatedBy" placeholder="CreatedBy" disabled/>
+          </div>
+          
+         
+      </div>
+      <div class="row">
+            <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+                    <b><label class="control-label">LastModifiedDate </label></b>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+                    <input type="date" [(ngModel)]="cashRequestData.LastModifiedDate" placeholder="LastModifiedDate" disabled/>
+                </div>
+          <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+              <b><label class="control-label">LastModifiedBy </label></b>
+          </div>
+          <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+              <input [(ngModel)]="cashRequestData.LastModifiedBy" placeholder="LastModifiedBy" [attr.disabled]="cashRequestData.IsActive" disabled/>
+          </div>
+              
+      </div>
+      <div class="row">
+            <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+                <b><label class="control-label">Action </label></b>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+                    <button (click)="proceedCashRequest()">Save</button>
+                </div>
+            <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+            </div>
+            <div >
+                <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+                        <input [(ngModel)]="cashRequestData.IsActive" placeholder="IsActive" disabled/>
+                </div>
+                </div>         
+        </div>
+  </div>
+ 
+</div>
+

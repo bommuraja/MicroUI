@@ -1,0 +1,48 @@
+<div>
+  <h2>Update Account Transaction</h2>
+  <div>
+    <label>AccountTransactionID:
+      <input [(ngModel)]="accountTransactionData.AccountTransactionID" placeholder="AccountTransactionID"/>
+    </label><br>
+    <label>UserAccountID:
+      <input [(ngModel)]="accountTransactionData.UserAccountID" placeholder="UserAccountID"/>
+    </label><br>
+    <label>TransactionReferenceID:
+      <input [(ngModel)]="accountTransactionData.TransactionReferenceID" placeholder="TransactionReferenceID"/>
+    </label><br>
+
+    <label>TransactionDate:
+      <input [(ngModel)]="accountTransactionData.TransactionDate" placeholder="TransactionDate"/>
+    </label><br>
+    <label>TransactionAmount:
+      <input [(ngModel)]="accountTransactionData.TransactionAmount" placeholder="TransactionAmount"/>
+    </label><br>
+    <label>TransactionDescription:
+      <input [(ngModel)]="accountTransactionData.TransactionDescription" placeholder="TransactionDescription"/>
+    </label><br>
+
+    <label>IsCredit:
+      <input [(ngModel)]="accountTransactionData.IsCredit" placeholder="IsCredit"/>
+    </label><br>
+    <label>BalanceAmount:
+      <input [(ngModel)]="accountTransactionData.BalanceAmount" placeholder="BalanceAmount"/>
+    </label><br>
+    <label>CreatedDate:
+      <input [(ngModel)]="accountTransactionData.CreatedDate" placeholder="CreatedDate"/>
+    </label><br>
+
+    <label>CreatedBy:
+      <input [(ngModel)]="accountTransactionData.CreatedBy" placeholder="CreatedBy"/>
+    </label><br>
+    <label>LastModifiedDate:
+      <input [(ngModel)]="accountTransactionData.LastModifiedDate" placeholder="LastModifiedDate"/>
+    </label><br>
+    <label>LastModifiedBy:
+      <input [(ngModel)]="accountTransactionData.LastModifiedBy" placeholder="LastModifiedBy"/>
+    </label><br>
+  
+
+  </div>
+  <button (click)="updateAccountTransaction()">Save</button>
+</div>
+

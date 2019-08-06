@@ -1,0 +1,27 @@
+<div>
+  <h2>Add Cash Request Status</h2>
+  <div>
+    <label>CashRequestStatusID:
+      <input [(ngModel)]="cashRequestStatusData.CashRequestStatusID" placeholder="CashRequestStatusID"/>
+    </label><br>
+    <label>CashRequestStatusName:
+      <input [(ngModel)]="cashRequestStatusData.CashRequestStatusName" placeholder="CashRequestStatusName"/>
+    </label><br>
+    <label>CreatedDate:
+      <input [(ngModel)]="cashRequestStatusData.CreatedDate" placeholder="CreatedDate"/>
+    </label><br>
+    <label>CreatedBy:
+      <input [(ngModel)]="cashRequestStatusData.CreatedBy" placeholder="CreatedBy"/>
+    </label><br>
+    <label>LastModifiedDate:
+      <input [(ngModel)]="cashRequestStatusData.LastModifiedDate" placeholder="LastModifiedDate"/>
+    </label><br>
+    <label>LastModifiedBy:
+        <input [(ngModel)]="cashRequestStatusData.LastModifiedBy" placeholder="LastModifiedBy"/>
+      </label><br>
+     
+
+  </div>
+  <button (click)="addCashRequestStatus()">Save</button>
+</div>
+

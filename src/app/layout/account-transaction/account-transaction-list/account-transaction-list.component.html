@@ -1,0 +1,38 @@
+<div>
+  <button (click)="add()">
+    Add New 
+  </button>
+</div>  
+
+<table class="table table-bordered">
+  <thead>    
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">TransactionDate</th>
+            <th scope="col">TransactionAmount</th>
+            <th scope="col">Actions</th>            
+          </tr>
+  </thead>
+  
+  <tbody>
+     
+    <tr *ngFor="let accTrans of accountTransactionList; let i=index;">
+      <th scope="row">{{i+1}}</th>
+      <td>{{accTrans.TransactionDate}}</td>
+      <td>{{accTrans.TransactionAmount}}</td>
+      <td>          
+        <a routerLink="/pages/account-transaction/account-transaction-edit/{{accTrans.AccountTransactionID}}">
+          Edit
+        </a>
+        <a routerLink="/pages/account-transaction/account-transaction-view/{{accTrans.AccountTransactionID}}">
+          View
+        </a>
+        <a routerLink="/pages/account-transaction/account-transaction-delete/{{accTrans.AccountTransactionID}}">
+          Delete
+        </a>
+      </td>
+    </tr>
+   
+  </tbody>
+</table>
+

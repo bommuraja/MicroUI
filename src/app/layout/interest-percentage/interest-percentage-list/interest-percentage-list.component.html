@@ -1,0 +1,38 @@
+<div>
+  <button (click)="add()">
+    Add New 
+  </button>
+</div>  
+
+<table class="table table-bordered">
+  <thead>    
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Percentage</th>
+            <th scope="col">CreatedBy</th>
+            <th scope="col">Actions</th>            
+          </tr>
+  </thead>
+  
+  <tbody>
+     
+    <tr *ngFor="let intePer of interestPercentageList; let i=index;">
+      <th scope="row">{{i+1}}</th>
+      <td>{{intePer.InterestPercentage1}}</td>
+      <td>{{intePer.CreatedBy}}</td>
+      <td>          
+        <a routerLink="/pages/interest-percentage/interest-percentage-edit/{{intePer.InterestPercentageID}}">
+          Edit
+        </a>
+        <a routerLink="/pages/interest-percentage/interest-percentage-view/{{intePer.InterestPercentageID}}">
+          View
+        </a>
+        <a routerLink="/pages/interest-percentage/interest-percentage-delete/{{intePer.InterestPercentageID}}">
+          Delete
+        </a>
+      </td>
+    </tr>
+   
+  </tbody>
+</table>
+

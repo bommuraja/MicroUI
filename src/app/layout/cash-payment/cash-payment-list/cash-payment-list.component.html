@@ -1,0 +1,39 @@
+<div>
+  <button (click)="add()">
+    Add New 
+  </button>
+</div>  
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">UserAccountID</th>
+      <th scope="col">PaymentDate</th>
+      <th scope="col">PaymentAmount</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let cashpayment of CashPaymentList; let i=index;">
+    <tr>
+      <th scope="row">{{i+1}}</th>      
+      <td>{{cashpayment.UserAccountID}}</td>
+      <td>{{cashpayment.PaymentDate}}</td>
+      <td>{{cashpayment.PaymentAmount}}</td>
+     
+      <td>
+          
+        <a routerLink="/pages/cash-payment/cash-payment-edit/{{cashpayment.CashPaymentID}}">
+          Edit
+        </a>
+        <a routerLink="/pages/cash-payment/cash-payment-view/{{cashpayment.CashPaymentID}}">
+          View
+        </a>
+        <a routerLink="/pages/cash-payment/cash-payment-delete/{{cashpayment.CashPaymentID}}">
+          Delete
+        </a>
+      </td>
+    </tr>
+   
+  </tbody>
+</table>
+

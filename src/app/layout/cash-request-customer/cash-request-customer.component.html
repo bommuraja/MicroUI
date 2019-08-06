@@ -1,0 +1,215 @@
+<div>
+  
+  <div>
+      <div class="row">
+          <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+              <b><label class="control-label">CashRequestID </label></b>
+          </div>
+          <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+                <div *ngIf="cashRequestData.IsActive">
+                        <input [(ngModel)]="cashRequestData.CashRequestID" placeholder="CashRequestID" disabled/>
+                                 </div>
+                                <div *ngIf="!cashRequestData.IsActive">
+                                        <input [(ngModel)]="cashRequestData.CashRequestID" placeholder="CashRequestID" disabled/>
+                                </div> 
+             
+          </div>
+          <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+              <b><label class="control-label">UserAccountName </label></b>
+          </div>
+          <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+              
+              <div *ngIf="cashRequestData.IsActive">
+                    <input [(ngModel)]="cashRequestData.UserAccountName" placeholder="UserAccountName" disabled/>
+                             </div>
+                            <div *ngIf="!cashRequestData.IsActive">
+                                    <input [(ngModel)]="cashRequestData.UserAccountName" placeholder="UserAccountName" disabled/>
+                            </div> 
+          </div>
+      </div>     
+     <div class="row">
+          <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+              <b><label class="control-label">CashRequestStatusName </label></b>
+          </div>
+          <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+                <div *ngIf="cashRequestData.IsActive">
+                        <input class="bg-info" [(ngModel)]="cashRequestData.CashRequestStatusName" placeholder="CashRequestStatusName" disabled/>                    
+                                 </div>
+                                <div *ngIf="!cashRequestData.IsActive">
+                                        <input class="bg-info" [(ngModel)]="cashRequestData.CashRequestStatusName" placeholder="CashRequestStatusName" disabled/>     
+                                </div> 
+             
+          </div>
+          <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+                PaymentFromBankID
+          </div>
+          <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+            <div *ngIf="cashRequestData.IsActive">
+                <select (change)="cashRequestData.PaymentFromBankID=($event.target.value)" [(ngModel)]="cashRequestData.PaymentFromBankID" disabled>
+                        <option value="0">--All--</option>
+                        <option *ngFor="let payFromBank of cashRequestData.PaymentFromBankList" value={{payFromBank.FinancialInstitutionID}}>
+                            {{payFromBank.InstitutionName}}
+                        </option>
+                    </select>
+                         </div>
+                        <div *ngIf="!cashRequestData.IsActive">
+                                <select (change)="cashRequestData.PaymentFromBankID=($event.target.value)" disabled>
+                                        <option value="0">--All--</option>
+                                        <option *ngFor="let payFromBank of cashRequestData.PaymentFromBankList" value={{payFromBank.FinancialInstitutionID}}>
+                                            {{payFromBank.InstitutionName}}
+                                        </option>
+                                    </select>
+                        </div> 
+
+          </div>
+     </div>  
+    <div class="row">
+        <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+            <b><label class="control-label">PaymentToBankID </label></b>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+                <div *ngIf="cashRequestData.IsActive">
+                        <select (change)="cashRequestData.PaymentToBankID=($event.target.value)" [(ngModel)]="cashRequestData.PaymentToBankID" disabled>
+                                <option value="0">--All--</option>
+                                <option *ngFor="let payToBank of cashRequestData.PaymentToBankList" value={{payToBank.FinancialInstitutionID}}>
+                                    {{payToBank.InstitutionName}}
+                                </option>
+                            </select>
+                                 </div>
+                                <div *ngIf="!cashRequestData.IsActive">
+                                        <select (change)="cashRequestData.PaymentToBankID=($event.target.value)" disabled>
+                                                <option value="0">--All--</option>
+                                                <option *ngFor="let payToBank of cashRequestData.PaymentToBankList" value={{payToBank.FinancialInstitutionID}}>
+                                                    {{payToBank.InstitutionName}}
+                                                </option>
+                                            </select>
+                                </div> 
+            
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+            <b><label class="control-label">RequestDate </label></b>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+                <div *ngIf="cashRequestData.IsActive">
+            <input [(ngModel)]="cashRequestData.RequestDate" placeholder="RequestDate" disabled/>                        
+                     </div>
+                    <div *ngIf="!cashRequestData.IsActive">
+            <input [(ngModel)]="cashRequestData.RequestDate" placeholder="RequestDate" disabled/>                        
+                    </div>  
+             
+        </div>
+    </div> 
+    <div class="row">
+      <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+          <b><label class="control-label">ResponseDate </label></b>
+      </div>
+      <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+            <div *ngIf="cashRequestData.IsActive">
+                    <input [(ngModel)]="cashRequestData.ResponseDate" placeholder="ResponseDate" disabled/>
+                 </div>
+                <div *ngIf="!cashRequestData.IsActive">
+                        <input [(ngModel)]="cashRequestData.ResponseDate" placeholder="ResponseDate" disabled/>
+                </div>  
+         
+      </div>
+      <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+          <b><label class="control-label">RequestAmount </label></b>
+      </div>
+      <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+            <div *ngIf="cashRequestData.IsActive">
+                    <input [(ngModel)]="cashRequestData.RequestAmount" placeholder="RequestAmount" disabled/>
+                 </div>
+                <div *ngIf="!cashRequestData.IsActive">
+                        <input [(ngModel)]="cashRequestData.RequestAmount" placeholder="RequestAmount" />
+                </div>  
+          
+      </div>
+    </div> 
+<div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">ResponseAmount </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+            <div *ngIf="cashRequestData.IsActive">
+                    <input [(ngModel)]="cashRequestData.ResponseAmount" placeholder="ResponseAmount" disabled/>
+                 </div>
+                <div *ngIf="!cashRequestData.IsActive">
+                    <input [(ngModel)]="cashRequestData.ResponseAmount" placeholder="ResponseAmount" disabled/>
+                </div>  
+        
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">Action </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+            <div *ngIf="cashRequestData.IsActive">
+                   
+                        <button (click)="cashRequestCustomer('cancel')">Cancel</button>
+                   
+                    </div>
+                    <div *ngIf="!cashRequestData.IsActive">
+                       
+                            <button (click)="cashRequestCustomer('submit')">Submit</button>
+                        
+                    </div>
+                </div> 
+    
+</div>  
+<div class="d-none">
+<div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">CreatedBy </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+            <div *ngIf="cashRequestData.IsActive">
+                    <input [(ngModel)]="cashRequestData.CreatedBy" placeholder="CreatedBy" disabled/>
+                 </div>
+                <div *ngIf="!cashRequestData.IsActive">
+                        <input [(ngModel)]="cashRequestData.CreatedBy" placeholder="CreatedBy" disabled/>
+                </div>   
+       
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">LastModifiedDate </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+            <div *ngIf="cashRequestData.IsActive">
+                <input [(ngModel)]="cashRequestData.LastModifiedDate" placeholder="LastModifiedDate" disabled/>
+             </div>
+            <div *ngIf="!cashRequestData.IsActive">
+                <input [(ngModel)]="cashRequestData.LastModifiedDate" placeholder="LastModifiedDate" disabled/>
+            </div>      
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">LastModifiedBy </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+            <div *ngIf="cashRequestData.IsActive">
+        <input type="hidden" [(ngModel)]="cashRequestData.LastModifiedBy" placeholder="LastModifiedBy" disabled/>
+            </div>
+            <div *ngIf="!cashRequestData.IsActive">
+                    <input [(ngModel)]="cashRequestData.LastModifiedBy" placeholder="LastModifiedBy" disabled/>
+                        </div>
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">CreatedDate </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group">
+            <div *ngIf="cashRequestData.IsActive">
+                    <input [(ngModel)]="cashRequestData.CreatedDate" placeholder="CreatedDate" disabled/>
+                 </div>
+                <div *ngIf="!cashRequestData.IsActive">
+                        <input [(ngModel)]="cashRequestData.CreatedDate" placeholder="CreatedDate" disabled/>
+                </div>
+        </div>
+   
+</div>
+</div>
+  
+
+  </div>
+  
+</div>
+

@@ -1,0 +1,21 @@
+<div>
+  <h2>Add Cash Request </h2>
+  <div>
+   
+    <label>CashRequestStatusID:
+      <input [(ngModel)]="cashRequestData.CashRequestStatusID" placeholder="CashRequestStatusID"/>
+    </label><br>
+    <label>RequestAmount:
+      <input [(ngModel)]="cashRequestData.RequestAmount" placeholder="RequestAmount"/>
+    </label><br>
+    <label>ResponseAmount:
+      <input [(ngModel)]="cashRequestData.ResponseAmount" placeholder="ResponseAmount"/>
+    </label><br>
+   
+     
+
+  </div>
+  <button (click)="addCashRequest()">Request</button>
+  <button (click)="deleteCashRequest()">Cancel</button>
+</div>
+

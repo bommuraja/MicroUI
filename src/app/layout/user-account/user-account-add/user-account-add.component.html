@@ -1,0 +1,70 @@
+<div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">Role List </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+      <select (change)="userAccountData.RoleID=($event.target.value)" [(ngModel)]="userAccountData.RoleID">
+        <option value="0">--All--</option>
+        <option *ngFor="let userRole of userAccountData.UserRoleList" value={{userRole.RoleID}}>
+            {{userRole.RoleName}}
+        </option>
+    </select>
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+      <b><label class="control-label">UserAccountName </label></b>
+  </div>
+  <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+    <input [(ngModel)]="userAccountData.UserAccountName" placeholder="UserAccount Name"/>
+  </div>
+  </div>
+ 
+  <div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">ContactNumber </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+      <input [(ngModel)]="userAccountData.ContactNumber" placeholder="Contact Number"/>
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+      <b><label class="control-label">UserName </label></b>
+  </div>
+  <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+    <input [(ngModel)]="userAccountData.UserName" placeholder="UserName"/>
+  </div>
+  </div>
+ 
+  <div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">Password </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+      <input [(ngModel)]="userAccountData.Password" placeholder="Password"/>
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+      <b><label class="control-label">EMailAddress </label></b>
+  </div>
+  <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+    <input [(ngModel)]="userAccountData.EMailAddress" placeholder="EMailAddress"/>
+  </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+        <b><label class="control-label">ContactAddress </label></b>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+      <input [(ngModel)]="userAccountData.ContactAddress" placeholder="ContactAddress"/>
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2 form-group">
+      <b><label class="control-label">Action </label></b>
+  </div>
+  <div class="col-sm-4 col-md-4 col-lg-4 form-group ">
+    <button (click)="addUserAccount()">{{userAccountData.NextAction}}</button>
+  </div>
+  </div>
+   
+    
+   
+  
+
+

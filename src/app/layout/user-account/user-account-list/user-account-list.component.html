@@ -1,0 +1,76 @@
+<div>
+  <a routerLink="/layout/user-account/user-account-add/0/AddPage">
+    Add New 
+  </a>
+</div>  
+  <input class="form-control" type="text" name="search" [(ngModel)]="filter">      
+ <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th (click)="sort('UserAccountName')" scope="col" >UserAccountName
+          <img height="16" width="16" src="../../../../assets/images/sort-solid.svg">
+          <span class="glyphicon sort-icon" *ngIf="key =='UserAccountName'" [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span> 
+      </th>
+      <th (click)="sort('ContactNumber')" scope="col" >ContactNumber
+          <i class="glyphicon"></i>
+         <span class="glyphicon sort-icon" *ngIf="key =='ContactNumber'" [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span> 
+      </th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+    <tbody *ngFor="let userAccount of UserAccountList| orderBy: key : reverse | filter:filter| slice: uptoPreviousPageTotalRecord | slice: 0:itemsPerPage ; let i=index;">
+    <tr>
+      <th scope="row">{{uptoPreviousPageTotalRecord+i+1}}</th>
+      <td>
+        {{userAccount.UserAccountName}}
+      </td>
+      <td>
+        {{userAccount.ContactNumber}}
+      <td>
+          
+        <a routerLink="/layout/user-account/user-account-add/{{userAccount.UserAccountID}}/EditPage">
+          Edit
+        </a>
+        <a routerLink="/layout/user-account/user-account-add/{{userAccount.UserAccountID}}/ViewPage">
+          View
+        </a>
+        <a routerLink="/layout/user-account/user-account-add/{{userAccount.UserAccountID}}/DeletePage">
+          Delete
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<div class="row">
+ 
+  <div class="col-sm-6 col-md-6 col-lg-6 form-group ">
+    <label class="control-label">Showing {{strRecordOfnthPage}} - {{endRecordOfnthPage}} of {{totalNoOfRecords}} records </label>
+  
+      <input class="text-center ml-4" type="number" [min]="1" [max]="15" step="1" [(ngModel)]="itemsPerPage" (keyup)="changePagesize(nthPage,currentPage)"> 
+      <label class="control-label ml-1"> records per page </label>    
+    
+  </div>
+ <div class="col-sm-6 col-md-6 col-lg-6 form-group ">
+   <div class="float-right">
+  <ngb-pagination [collectionSize]="totalNoOfRecords"
+                [pageSize]="itemsPerPage"
+                [(page)]="currentPage"
+                [maxSize]="4" 
+                [rotate]="true"
+                [boundaryLinks]="true"
+                aria-label="Default pagination"
+                (pageChange)="onPageChange(currentPage)">
+
+</ngb-pagination>
+</div>
+</div>
+</div>
+
+
+
+
+
+

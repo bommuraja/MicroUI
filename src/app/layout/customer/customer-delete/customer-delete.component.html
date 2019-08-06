@@ -1,0 +1,39 @@
+<div>
+  <h2>Customer Delete</h2>
+  <div>
+    <label>Customer Name:
+      <input [(ngModel)]="customerData.CustomerName" placeholder="Customer Name"/>
+    </label><br>
+    <label>Contact Number:
+      <input [(ngModel)]="customerData.ContactNumber" placeholder="Contact Number"/>
+    </label><br>
+    <label>MailAddress:
+      <input [(ngModel)]="customerData.MailAddress" placeholder="MailAddress"/>
+    </label><br>
+    <label>AddressLine1:
+      <input [(ngModel)]="customerData.AddressLine1" placeholder="AddressLine1"/>
+    </label><br>
+    <label>AddressLine2:
+      <input [(ngModel)]="customerData.AddressLine2" placeholder="AddressLine2"/>
+    </label><br>
+    <label>UserName:
+      <input [(ngModel)]="customerData.UserName" placeholder="UserName"/>
+    </label><br>
+    <label>Password:
+      <input [(ngModel)]="customerData.Password" placeholder="Password"/>
+    </label><br>
+    <label>CreatedDate:
+      <input [(ngModel)]="customerData.CreatedDate" placeholder="CreatedDate"/>
+    </label><br>
+    <label>CreatedBy:
+      <input [(ngModel)]="customerData.CreatedBy" placeholder="CreatedBy"/>
+    </label><br>
+    <label>LastModifiedDate:
+      <input [(ngModel)]="customerData.LastModifiedDate" placeholder="LastModifiedDate"/>
+    </label><br>
+    <label>LastModifiedBy:
+      <input [(ngModel)]="customerData.LastModifiedBy" placeholder="LastModifiedBy"/>
+    </label><br>
+  </div>
+  <button (click)="deleteCustomer()">Delete</button>
+</div>

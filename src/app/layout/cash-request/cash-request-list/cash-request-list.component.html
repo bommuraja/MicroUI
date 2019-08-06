@@ -1,0 +1,41 @@
+<div>
+  <button (click)="add()">
+    Add New 
+  </button>
+</div>  
+
+<table class="table table-bordered">
+  <thead>    
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">RequestDate</th>
+            <th scope="col">RequestAmount</th>
+            <th scope="col">Actions</th>            
+          </tr>
+  </thead>
+  
+  <tbody>
+     
+    <tr *ngFor="let cashReq of cashRequestList; let i=index;">
+      <th scope="row">{{i+1}}</th>
+      <td>{{cashReq.RequestDate}}</td>
+      <td>{{cashReq.RequestAmount}}</td>
+      <td>          
+        <a routerLink="/layout/cash-request/cash-request-edit/{{cashReq.CashRequestID}}">
+          Edit
+        </a>
+        <a routerLink="/layout/cash-request/cash-request-view/{{cashReq.CashRequestID}}">
+          View
+        </a>
+        <a routerLink="/layout/cash-request/cash-request-delete/{{cashReq.CashRequestID}}">
+          Delete
+        </a>
+        <a routerLink="/layout/cash-request/cash-request-proceed/{{cashReq.CashRequestID}}">
+          Proceed
+        </a>
+      </td>
+    </tr>
+   
+  </tbody>
+</table>
+

@@ -1,0 +1,25 @@
+<div>
+  <h2>View Cash Payment Status</h2>
+  <div>
+    <label>CashPaymentID:
+      <input [(ngModel)]="cashPaymentStatusData.CashPaymentStatusID" placeholder="CashPaymentStatusID" disabled/>
+    </label><br>    
+    <label>CashPaymentStatusName:
+      <input [(ngModel)]="cashPaymentStatusData.CashPaymentStatusName" placeholder="CashPaymentStatusName" disabled/>
+    </label><br>    
+    <label>CreatedDate:
+      <input [(ngModel)]="cashPaymentStatusData.CreatedDate" placeholder="Created By" disabled/>
+    </label><br>
+    <label>CreatedBy:
+      <input [(ngModel)]="cashPaymentStatusData.CreatedBy" placeholder="Created By" disabled/>
+    </label><br>
+    <label>LastModifiedDate:
+      <input [(ngModel)]="cashPaymentStatusData.LastModifiedDate" placeholder="Created By" disabled/>
+    </label><br>
+    <label>LastModifiedBy:
+      <input [(ngModel)]="cashPaymentStatusData.LastModifiedBy" placeholder="Created By" disabled/>
+    </label><br>
+   
+  </div>
+  <button (click)="navigateToCashPaymentStatusList()">Back</button>
+</div>

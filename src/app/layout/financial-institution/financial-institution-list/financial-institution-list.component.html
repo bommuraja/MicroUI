@@ -1,0 +1,38 @@
+<div>
+  <button (click)="add()">
+    Add New 
+  </button>
+</div>  
+
+<table class="table table-bordered">
+  <thead>    
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">AccountName</th>
+            <th scope="col">InstitutionName</th>
+            <th scope="col">Actions</th>            
+          </tr>
+  </thead>
+  
+  <tbody>
+     
+    <tr *ngFor="let finIns of financialInstitutionList; let i=index;">
+      <th scope="row">{{i+1}}</th>
+      <td>{{finIns.AccountName}}</td>
+      <td>{{finIns.InstitutionName}}</td>
+      <td>          
+        <a routerLink="/layout/financial-institution/financial-institution-edit/{{finIns.FinancialInstitutionID}}">
+          Edit
+        </a>
+        <a routerLink="/layout/financial-institution/financial-institution-view/{{finIns.FinancialInstitutionID}}">
+          View
+        </a>
+        <a routerLink="/layout/financial-institution/financial-institution-delete/{{finIns.FinancialInstitutionID}}">
+          Delete
+        </a>
+      </td>
+    </tr>
+   
+  </tbody>
+</table>
+

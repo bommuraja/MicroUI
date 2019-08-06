@@ -1,0 +1,28 @@
+<div>
+    <h2>View Interest Percentage</h2>
+    <div>
+        <input type="hidden" [(ngModel)]="interestPercentageData.InterestPercentageID"/><br>
+      <label>UserAccountID:
+        <input [(ngModel)]="interestPercentageData.UserAccountID" placeholder="UserAccountID" disabled/>
+      </label><br>
+      <label>InterestPercentage1:
+        <input [(ngModel)]="interestPercentageData.InterestPercentage1" placeholder="InterestPercentage1" disabled/>
+      </label><br>
+      <label>CreatedDate:
+        <input [(ngModel)]="interestPercentageData.CreatedDate" placeholder="CreatedDate" disabled/>
+      </label><br>
+      <label>CreatedBy:
+        <input [(ngModel)]="interestPercentageData.CreatedBy" placeholder="CreatedBy" disabled/>
+      </label><br>
+      <label>LastModifiedDate:
+          <input [(ngModel)]="interestPercentageData.LastModifiedDate" placeholder="LastModifiedDate" disabled/>
+        </label><br>
+        <label>LastModifiedBy:
+            <input [(ngModel)]="interestPercentageData.LastModifiedBy" placeholder="LastModifiedBy" disabled/>
+          </label><br>
+  
+    </div>
+    <button (click)="navigateToInterestPercentageList()">Back</button>
+  </div>
+  
+  

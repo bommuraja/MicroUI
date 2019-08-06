@@ -1,0 +1,38 @@
+<div>
+  <button (click)="add()">
+    Add New 
+  </button>
+</div>  
+
+<table class="table table-bordered">
+  <thead>    
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">CashRequestStatusName</th>
+            <th scope="col">CreatedDate</th>
+            <th scope="col">Actions</th>            
+          </tr>
+  </thead>
+  
+  <tbody>
+     
+    <tr *ngFor="let caReSta of cashRequestStatusList; let i=index;">
+      <th scope="row">{{i+1}}</th>
+      <td>{{caReSta.CashRequestStatusName}}</td>
+      <td>{{caReSta.CreatedDate}}</td>
+      <td>          
+        <a routerLink="/pages/cash-request-status/cash-request-status-edit/{{caReSta.CashRequestStatusID}}">
+          Edit
+        </a>
+        <a routerLink="/pages/cash-request-status/cash-request-status-view/{{caReSta.CashRequestStatusID}}">
+          View
+        </a>
+        <a routerLink="/pages/cash-request-status/cash-request-status-delete/{{caReSta.CashRequestStatusID}}">
+          Delete
+        </a>
+      </td>
+    </tr>
+   
+  </tbody>
+</table>
+

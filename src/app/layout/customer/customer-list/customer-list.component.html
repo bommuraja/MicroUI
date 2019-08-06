@@ -1,0 +1,22 @@
+<div>
+    <button (click)="add()">
+      Add
+    </button>
+  </div>
+    <li *ngFor="let cust of customers; let i=index;">
+      <a routerLink="/pages/customer-view/{{cust.CustomerID}}">
+        <span class="badge">{{i+1}}</span> {{cust.CustomerName}}
+      </a>
+     <a routerLink="/pages/customer-edit/{{cust.CustomerID}}">
+      Edit
+    </a>
+    <a routerLink="/pages/customer-view/{{cust.CustomerID}}">
+      View
+    </a>
+    <a routerLink="/pages/customer-delete/{{cust.CustomerID}}">
+      Delete
+    </a>
+  
+    </li>
+  
+  

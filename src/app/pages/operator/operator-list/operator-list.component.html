@@ -1,0 +1,36 @@
+<div>
+    <button (click)="add()">
+      Add New 
+    </button>
+  </div>  
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Computer Staff</th>
+        <th scope="col">Created By</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let operator of operatorList; let i=index;">
+      <tr>
+        <th scope="row">{{i+1}}</th>
+        <td>{{operator.DataEntryOperatorName}}</td>
+        <td>{{operator.CreatedBy}}</td>
+        <td>
+            
+          <a routerLink="/pages/operator/operator-edit/{{operator.DataEntryOperatorID}}">
+            Edit
+          </a>
+          <a routerLink="/pages/operator/operator-view/{{operator.DataEntryOperatorID}}">
+            View
+          </a>
+          <a routerLink="/pages/operator/operator-delete/{{operator.DataEntryOperatorID}}">
+            Delete
+          </a>
+        </td>
+      </tr>
+     
+    </tbody>
+  </table>
+ 

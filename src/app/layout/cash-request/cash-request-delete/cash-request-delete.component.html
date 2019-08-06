@@ -1,0 +1,50 @@
+<div>
+  <h2>Update Cash Request </h2>
+  <div>
+    <label>CashRequestID:
+      <input [(ngModel)]="cashRequestData.CashRequestID" placeholder="CashRequestID" disabled/>
+    </label><br>
+    <label>UserAccountID:
+      <input [(ngModel)]="cashRequestData.UserAccountID" placeholder="UserAccountID" disabled/>
+    </label><br>
+
+    <label>CashRequestStatusID:
+      <input [(ngModel)]="cashRequestData.CashRequestStatusID" placeholder="CashRequestStatusID" disabled/>
+    </label><br>
+    <label>PaymentFromBankID:
+      <input [(ngModel)]="cashRequestData.PaymentFromBankID" placeholder="PaymentFromBankID" disabled/>
+    </label><br>
+    <label>PaymentToBankID:
+      <input [(ngModel)]="cashRequestData.PaymentToBankID" placeholder="PaymentToBankID" disabled/>
+    </label><br>
+     
+    <label>RequestDate:
+      <input [(ngModel)]="cashRequestData.RequestDate" placeholder="RequestDate" disabled/>
+    </label><br>
+    <label>ResponseDate:
+      <input [(ngModel)]="cashRequestData.ResponseDate" placeholder="ResponseDate" disabled/>
+    </label><br>
+    <label>RequestAmount:
+      <input [(ngModel)]="cashRequestData.RequestAmount" placeholder="RequestAmount" disabled/>
+    </label><br>
+    <label>ResponseAmount:
+      <input [(ngModel)]="cashRequestData.ResponseAmount" placeholder="ResponseAmount" disabled/>
+    </label><br>
+    <label>CreatedDate:
+      <input [(ngModel)]="cashRequestData.CreatedDate" placeholder="CreatedDate" disabled/>
+    </label><br>
+    <label>CreatedBy:
+      <input [(ngModel)]="cashRequestData.CreatedBy" placeholder="CreatedBy" disabled/>
+    </label><br>
+    <label>LastModifiedDate:
+      <input [(ngModel)]="cashRequestData.LastModifiedDate" placeholder="LastModifiedDate" disabled/>
+    </label><br>
+    <label>LastModifiedBy:
+        <input [(ngModel)]="cashRequestData.LastModifiedBy" placeholder="LastModifiedBy" disabled/>
+      </label><br>
+     
+
+  </div>
+  <button (click)="deleteCashRequest()">Delete</button>
+</div>
+

@@ -1,0 +1,17 @@
+<div>
+  <h2>Add Operator</h2>
+  <div>
+    <label>Operator Name:
+      <input [(ngModel)]="operatorData.DataEntryOperatorName" placeholder="Operator Name"/>
+    </label><br>
+    <label>Created Date:
+      <input [(ngModel)]="operatorData.CreatedDate" placeholder="Created Date"/>
+    </label><br>
+    <label>Created By:
+      <input [(ngModel)]="operatorData.CreatedBy" placeholder="Created By"/>
+    </label><br>
+   
+  </div>
+  <button (click)="addOperator()">Save</button>
+</div>
+
